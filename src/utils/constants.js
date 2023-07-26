@@ -8,3 +8,7 @@ export const VIDEO_INFO_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=" +
   Google_API_KEY +
   "&id=";
+export const COMMENTS_API =
+  "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&maxResults=30&key=" +
+  Google_API_KEY +
+  "&videoId=";

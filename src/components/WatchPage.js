@@ -3,9 +3,12 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/navSlice";
 import { useSearchParams } from "react-router-dom";
 import VideoInfo from "./VideoInfo";
+import CommentThread from "./CommentThread";
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
   // console.log(searchParams.get("v"));
+  const id = searchParams.get("v");
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
@@ -31,6 +34,9 @@ const WatchPage = () => {
       <div className="flex justify-between my-2">
         <div className="w-[70%]">
           <VideoInfo />
+          <div>
+            <CommentThread videoId={id} />
+          </div>
         </div>
         <div className="w-[30%]">Suggestion</div>
       </div>
