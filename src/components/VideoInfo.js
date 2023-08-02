@@ -20,7 +20,7 @@ const VideoInfo = () => {
     getVideoInfo();
 
     // eslint-disable-next-line
-  }, []);
+  }, [videoId]);
   const getVideoInfo = async () => {
     const data = await fetch(VIDEO_INFO_API + videoId);
     const json = await data.json();

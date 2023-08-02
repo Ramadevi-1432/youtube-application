@@ -9,7 +9,7 @@ const CommentThread = ({ videoId }) => {
   useEffect(() => {
     getComments();
     // eslint-disable-next-line
-  }, []);
+  }, [videoId]);
   const getComments = async () => {
     const data = await fetch(COMMENTS_API + videoId);
     const json = await data.json();
@@ -19,7 +19,7 @@ const CommentThread = ({ videoId }) => {
   return (
     <div>
       <h1 className="mt-3 mb-3 font-bold">30 Comments</h1>
-      {commentThread.map((comment) => {
+      {commentThread?.map((comment) => {
         return (
           <div key={comment.id} className="mt-6">
             <Comment
