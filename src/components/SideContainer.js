@@ -72,7 +72,7 @@ const SideContainer = () => {
           </div>
           <div className="flex  gap-5 mt-1 items-center rounded-lg h-10">
             <MdOutlineFeedback className="text-xl ml-4" />
-            <li className="text-md">Help</li>
+            <li className="text-md">Feedback</li>
           </div>
           <div className="flex  gap-5 mt-1 items-center rounded-lg h-10">
             <RiArrowDownSLine className="text-xl ml-3" />
