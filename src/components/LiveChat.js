@@ -41,7 +41,7 @@ const LiveChat = () => {
         ))}
       </div>
       <form
-        className="mx-4 mt-2"
+        className="mx-4 mt-2 mb-2"
         onSubmit={(e) => {
           e.preventDefault();
           dispatch(

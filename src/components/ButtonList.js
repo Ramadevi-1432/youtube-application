@@ -1,28 +1,26 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 const ButtonList = () => {
   const buttonList = [
     "All",
+    "Games",
     "Music",
-    "Editing",
-    "Shopping",
     "Live",
-    "Smartphones",
+    "Comedy",
+    "Movies",
+    "Gadgets",
     "News",
-    "Sales",
-    "Tourism",
-    "Dhee",
-    "Cricket",
-    "Education",
-    "Love",
+    "Trending",
     "Drama",
     "Technology",
-    "Sports",
-    "Movies",
-    "Programming",
-    "Comedy",
-    "Thriller",
+    "Motivation",
+    "Love",
+    "Courses",
+    "Education",
+    "Fashion",
+    "Food",
   ];
   const slideLeftBtn = () => {
     let slide = document.getElementById("slide");
@@ -42,7 +40,9 @@ const ButtonList = () => {
 
       <div className="flex overflow-hidden  scroll-smooth" id="slide">
         {buttonList.map((btn, index) => (
-          <Button name={btn} key={index} />
+          <Link to={"/results?search_query=" + btn} key={index}>
+            <Button name={btn} />
+          </Link>
         ))}
       </div>
       <MdChevronRight

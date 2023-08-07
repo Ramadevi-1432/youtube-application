@@ -26,11 +26,15 @@ const RelatedVideoContainer = () => {
   return (
     <div>
       <h1 className="font-bold">Related Videos</h1>
-      {suggestedVideos?.map((video) => (
-        <Link to={"/watch?v=" + video.id.videoId} key={video?.id}>
-          <RelatedVideoInfoCard info={video} />
-        </Link>
-      ))}
+      <ul>
+        {suggestedVideos?.map((video) => (
+          <Link to={"/watch?v=" + video.id.videoId} key={video?.id}>
+            <li>
+              <RelatedVideoInfoCard info={video} />
+            </li>
+          </Link>
+        ))}
+      </ul>
     </div>
   );
 };

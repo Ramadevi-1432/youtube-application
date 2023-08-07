@@ -7,12 +7,14 @@ import { FaCircleUser } from "react-icons/fa6";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { searchResults } from "../utils/searchSlice";
 
+import SearchResultsContainer from "./SearchResultsContainer";
+
 const Header = () => {
   const searchCache = useSelector((store) => store.search);
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [showSuggestions, setShowSuggestions] = useState(true);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   // console.log(search);
   useEffect(() => {
@@ -44,7 +46,7 @@ const Header = () => {
     dispatch(toggleMenu());
   };
   return (
-    <div className="grid grid-flow-col px-3 py-3 m-1 shadow-lg">
+    <div className="grid grid-flow-col px-3 py-3 m-1  items-center">
       <div className="col-span-1 flex ">
         <img
           className="h-9 mr-3 cursor-pointer"
@@ -69,8 +71,9 @@ const Header = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
-            onBlur={() => setShowSuggestions(false)}
+            // onBlur={() => setShowSuggestions(false)}
           />
+          {/* <Link to={"/results?search_query=search"}> */}
           <button
             type="search"
             className=" border border-gray-400 hover:bg-gray-300  rounded-r-full px-4 py-2"
@@ -79,13 +82,12 @@ const Header = () => {
             🔍
           </button>
         </div>
+
         <div className="absolute bg-white w-[31.5rem] rounded-lg shadow-lg ">
           <ul>
             {showSuggestions &&
               suggestions.map((suggest, index) => (
-                <li className="py-2 px-4 hover:bg-gray-200" key={index}>
-                  🔍 {suggest}
-                </li>
+                <SearchResultsContainer res={suggest} key={index} />
               ))}
           </ul>
         </div>

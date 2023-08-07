@@ -16,6 +16,10 @@ export const YOUTUBE_VIDEO_SUGGESTION_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&type=video&key=" +
   Google_API_KEY +
   "&relatedToVideoId=";
+export const SEARCH_RESULTS_API =
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=" +
+  Google_API_KEY +
+  "&q=";
 const messageList = [
   "Shoutout to the mods!",
   "Can we get a follow train?",
