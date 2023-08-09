@@ -28,7 +28,7 @@ const RelatedVideoContainer = () => {
       <h1 className="font-bold">Related Videos</h1>
       <ul>
         {suggestedVideos?.map((video) => (
-          <Link to={"/watch?v=" + video.id.videoId} key={video?.id}>
+          <Link to={"/watch?v=" + video.id.videoId} key={video?.id?.videoId}>
             <li>
               <RelatedVideoInfoCard info={video} />
             </li>

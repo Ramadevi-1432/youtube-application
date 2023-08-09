@@ -21,40 +21,45 @@ const SideContainer = () => {
       <div>
         <ul>
           <Link to="/">
-            <div className="flex gap-5 items-center h-10 bg-gray-200 rounded-lg">
+            <div className="flex gap-5 items-center h-10 bg-gray-300 rounded-lg">
               <AiFillHome className="text-xl ml-4" />
               <li className="text-md">Home</li>
             </div>
           </Link>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
-            <VscDeviceCameraVideo className="text-xl ml-4" />
-            <li className="text-md">Shorts</li>
-          </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
-            <MdOutlineSubscriptions className="text-xl ml-4" />
-            <li className="text-md">Subscriptions</li>
-          </div>
+          <Link to={"/results?search_query=Shorts"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <VscDeviceCameraVideo className="text-xl ml-4" />
+              <li className="text-md">Shorts</li>
+            </div>
+          </Link>
+          <Link to={"/results?search_query=Subscriptions"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <MdOutlineSubscriptions className="text-xl ml-4" />
+              <li className="text-md">Subscriptions</li>
+            </div>
+          </Link>
+
           <hr className="border-gray-400" />
         </ul>
 
         <ul>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-2">
+          <div className="flex gap-5 items-center h-10 rounded-lg mt-2 hover:bg-gray-200">
             <MdOutlineVideoLibrary className="text-xl ml-4" />
             <li className="text-md">Library</li>
           </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
+          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
             <GoHistory className="text-xl ml-4" />
             <li className="text-md">History</li>
           </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
+          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
             <VscPlayCircle className="text-xl ml-4" />
             <li className="text-md">Your videos</li>
           </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
+          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
             <MdOutlineWatchLater className="text-xl ml-4" />
             <li className="text-md">Watch later</li>
           </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1">
+          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
             <AiOutlineLike className="text-xl ml-4" />
             <li className="text-md">Liked videos</li>
           </div>
@@ -62,19 +67,19 @@ const SideContainer = () => {
         </ul>
 
         <ul>
-          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10">
+          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10 hover:bg-gray-200">
             <AiOutlineSetting className="text-xl ml-4" />
             <li className="text-md">Settings</li>
           </div>
-          <div className="flex gap-5 mt-1 items-center rounded-lg h-10">
+          <div className="flex gap-5 mt-1 items-center rounded-lg h-10 hover:bg-gray-200">
             <BiHelpCircle className="text-xl ml-4" />
             <li className="text-md">Help</li>
           </div>
-          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10">
+          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10 hover:bg-gray-200">
             <MdOutlineFeedback className="text-xl ml-4" />
             <li className="text-md">Feedback</li>
           </div>
-          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10">
+          <div className="flex  gap-5 mt-1 items-center rounded-lg h-10 hover:bg-gray-200">
             <RiArrowDownSLine className="text-xl ml-3" />
             <li className="text-md">Show More</li>
           </div>

@@ -5,22 +5,22 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 const ButtonList = () => {
   const buttonList = [
     "All",
-    "Games",
-    "Music",
+    "Trending",
+    "News",
+    "Food",
+    "Technology",
     "Live",
+    "Motivation",
+    "Music",
     "Comedy",
     "Movies",
     "Gadgets",
-    "News",
-    "Trending",
+    "Games",
     "Drama",
-    "Technology",
-    "Motivation",
     "Love",
     "Courses",
     "Education",
     "Fashion",
-    "Food",
   ];
   const slideLeftBtn = () => {
     let slide = document.getElementById("slide");
