@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/navSlice";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaCircleUser } from "react-icons/fa6";
-import { FiSun } from "react-icons/fi";
 
 import { searchResults } from "../utils/searchSlice";
 import { Link } from "react-router-dom";
@@ -100,7 +99,6 @@ const Header = () => {
       </div>
 
       <div className="col-span-1 flex mt-1">
-        <FiSun className="text-3xl mr-3" />
         <IoMdNotificationsOutline className="text-3xl" />
 
         <div>

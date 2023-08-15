@@ -26,7 +26,7 @@ const SideContainer = () => {
               <li className="text-md">Home</li>
             </div>
           </Link>
-          <Link to={"/results?search_query=Shorts"}>
+          <Link to="/shorts">
             <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
               <VscDeviceCameraVideo className="text-xl ml-4" />
               <li className="text-md">Shorts</li>
@@ -43,26 +43,36 @@ const SideContainer = () => {
         </ul>
 
         <ul>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-2 hover:bg-gray-200">
-            <MdOutlineVideoLibrary className="text-xl ml-4" />
-            <li className="text-md">Library</li>
-          </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
-            <GoHistory className="text-xl ml-4" />
-            <li className="text-md">History</li>
-          </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
-            <VscPlayCircle className="text-xl ml-4" />
-            <li className="text-md">Your videos</li>
-          </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
-            <MdOutlineWatchLater className="text-xl ml-4" />
-            <li className="text-md">Watch later</li>
-          </div>
-          <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
-            <AiOutlineLike className="text-xl ml-4" />
-            <li className="text-md">Liked videos</li>
-          </div>
+          <Link to={"/results?search_query=Library"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-2 hover:bg-gray-200">
+              <MdOutlineVideoLibrary className="text-xl ml-4" />
+              <li className="text-md">Library</li>
+            </div>
+          </Link>
+          <Link to={"/results?search_query=History"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <GoHistory className="text-xl ml-4" />
+              <li className="text-md">History</li>
+            </div>
+          </Link>
+          <Link to={"/results?search_query=Your Videos"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <VscPlayCircle className="text-xl ml-4" />
+              <li className="text-md">Your videos</li>
+            </div>
+          </Link>
+          <Link to={"/results?search_query=Watch Later"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <MdOutlineWatchLater className="text-xl ml-4" />
+              <li className="text-md">Watch later</li>
+            </div>
+          </Link>
+          <Link to={"/results?search_query=Liked Videos"}>
+            <div className="flex gap-5 items-center h-10 rounded-lg mt-1 hover:bg-gray-200">
+              <AiOutlineLike className="text-xl ml-4" />
+              <li className="text-md">Liked videos</li>
+            </div>
+          </Link>
           <hr className="border-gray-400" />
         </ul>
 

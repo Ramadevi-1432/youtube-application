@@ -8,7 +8,7 @@ import LiveChat from "./LiveChat";
 import RelatedVideoContainer from "./RelatedVideoContainer";
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("v"));
+  // console.log(searchParams.get("v"));
   const id = searchParams.get("v");
 
   const dispatch = useDispatch();

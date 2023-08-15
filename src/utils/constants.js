@@ -1,4 +1,3 @@
-// const Google_API_KEY = "AIzaSyChgp22KWp73bMgzwJoFlY7auvhDsPwktw";
 export const YOUTUBE_VIDEO_URL =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
   process.env.REACT_APP_GOOGLE_API_KEY;
@@ -14,12 +13,16 @@ export const COMMENTS_API =
   "&videoId=";
 export const YOUTUBE_VIDEO_SUGGESTION_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&type=video&key=" +
-  process.env.REACT_APP_GOOGLE_API_KEY +
-  "&relatedToVideoId=";
+  process.env.REACT_APP_GOOGLE_API_KEY;
+
 export const SEARCH_RESULTS_API =
   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=" +
   process.env.REACT_APP_GOOGLE_API_KEY +
   "&q=";
+export const SHORTS_API =
+  `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&videoDuration=short&key=` +
+  `${process.env.REACT_APP_GOOGLE_API_KEY}` +
+  `&q=trendingshorts`;
 const messageList = [
   "Shoutout to the mods!",
   "Can we get a follow train?",
