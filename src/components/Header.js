@@ -8,7 +8,7 @@ import { searchResults } from "../utils/searchSlice";
 import { Link } from "react-router-dom";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { GoSearch } from "react-icons/go";
-import SearchResultsContainer from "./SearchResultsContainer";
+import { useNavigate } from "react-router-dom";
 
 // const rootEl = document.getElementById("root");
 // rootEl.classList.add("bg-gray");
@@ -17,6 +17,7 @@ const Header = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const searchCache = useSelector((store) => store.search);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,6 +51,12 @@ const Header = () => {
 
   const handleToggle = () => {
     dispatch(toggleMenu());
+  };
+  const handleListSuggestion = (e) => {
+    setSearchQuery(e.target.innerText);
+    setShowSuggestions(false);
+    navigate("/results?search_query=" + encodeURI(e.target.innerText));
+    setSearchQuery("");
   };
   return (
     <div className="grid grid-flow-col p-3 items-center">
@@ -91,8 +98,15 @@ const Header = () => {
         <div className="absolute w-[31.5rem] rounded-lg shadow-lg bg-white">
           <ul>
             {showSuggestions &&
-              suggestions?.map((s, index) => (
-                <SearchResultsContainer name={s} key={index} />
+              suggestions?.map((s) => (
+                <li
+                  className="flex items-center py-2 px-4 hover:bg-gray-200 cursor-pointer"
+                  key={s}
+                  onMouseDown={(e) => handleListSuggestion(e)}
+                >
+                  <GoSearch className="mr-2" />
+                  {s}
+                </li>
               ))}
           </ul>
         </div>
